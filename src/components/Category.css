@@ -1,0 +1,108 @@
+/* Category Page Specific Styles */
+.category-page {
+  min-height: 100vh;
+  background-color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Main Content */
+.category-content {
+  max-width: 1400px;
+  border-top: 2px #eee solid;
+  margin: 0 auto;
+  padding: 20px 20px 40px;
+}
+
+/* Category Introduction */
+.category-intro {
+  text-align: left;
+  margin-bottom: 50px;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.category-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.category-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0 auto;
+  text-align: left;
+}
+/* Article Grid */
+.article-grid {
+  margin-bottom: 40px;
+}
+
+.articles-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.articles-row:last-of-type {
+  margin-bottom: 30px;
+}
+
+/* Load More Button */
+.load-more-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.load-more-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.load-more-btn:hover {
+  background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .category-content {
+    padding: 20px 15px;
+  }
+
+  .category-intro {
+    padding: 25px 20px;
+  }
+
+  .category-title {
+    font-size: 28px;
+  }
+
+  .articles-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-title {
+    font-size: 24px;
+  }
+
+  .category-description {
+    font-size: 14px;
+  }
+
+  .load-more-btn {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}

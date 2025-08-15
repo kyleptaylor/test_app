@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# React Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A prototype web application built with React that demonstrates a blog-style website with three main pages.
+
+## Features
+
+### 1. Home Page (`/`)
+
+- Displays featured articles and recent articles
+- Each article links to the same Article page
+- Category navigation at the top linking to Category pages
+- Responsive grid layout for articles
+
+### 2. Article Page (`/article`)
+
+- Sample article content about "The Future of Artificial Intelligence"
+- Category navigation at the top
+- Related articles sidebar
+- Share buttons and tags
+- All article links point to the same page
+
+### 3. Category Page (`/category/:categoryName`)
+
+- Dynamic content based on the category parameter
+- Supports: technology, science, health, business
+- Category name changes based on the clicked category
+- Category navigation at the top
+- Articles specific to each category
+- Statistics and popular topics sidebar
+
+## Technical Details
+
+- **Framework**: React 18
+- **Routing**: React Router DOM
+- **Styling**: CSS with responsive design
+- **Components**: Modular component architecture
+- **Navigation**: Consistent category navigation across all pages
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+
+1. Start the development server:
+   ```bash
+   npm start
+   ```
+2. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Home.js          # Home page component
+│   ├── Home.css         # Home page styles
+│   ├── Article.js       # Article page component
+│   ├── Article.css      # Article page styles
+│   ├── Category.js      # Category page component
+│   └── Category.css     # Category page styles
+├── App.js               # Main app component with routing
+├── App.css              # Global styles
+└── index.js             # Application entry point
+```
+
+## Navigation Flow
+
+- **Home Page** → Article links → **Article Page**
+- **Home Page** → Category links → **Category Page**
+- **Article Page** → Category links → **Category Page**
+- **Category Page** → Category links → **Category Page** (same page, different content)
+- **Category Page** → Article links → **Article Page**
+
+## Notes
+
+- All article links point to the same Article page as specified in requirements
+- Category navigation is consistent across all pages
+- The application is fully responsive and works on mobile devices
+- No external APIs or databases are used - all content is static for demonstration purposes
 
 ## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (one-way operation)
